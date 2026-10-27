@@ -198,7 +198,7 @@ function HomePage() {
                     <Link
                       to="/anime/$animeId"
                       params={{ animeId: String(anime.anilistId) }}
-                      className="block aspect-[3/4] border-b-4 border-black overflow-hidden bg-[#130921]"
+                      className="block aspect-3/4 border-b-4 border-black overflow-hidden bg-[#130921]"
                     >
                       {anime.coverImage && (
                         <img
@@ -272,7 +272,7 @@ function HomePage() {
                       <Link
                         to="/anime/$animeId"
                         params={{ animeId: String(anime.id) }}
-                        className="block aspect-[3/4] overflow-hidden relative border-b-4 border-black"
+                        className="block aspect-3/4 overflow-hidden relative border-b-4 border-black"
                       >
                         <img
                           src={anime.coverImage.large}
@@ -284,9 +284,9 @@ function HomePage() {
                         </div>
                       </Link>
 
-                      <div className="p-3 flex flex-col flex-grow bg-[#23153c]">
+                      <div className="p-3 flex flex-col grow bg-[#23153c]">
                         <h3
-                          className="text-sm font-bold uppercase line-clamp-2 mb-4 flex-grow text-[#f0e6ff]"
+                          className="text-sm font-bold uppercase line-clamp-2 mb-4 grow text-[#f0e6ff]"
                           title={anime.title.romaji}
                         >
                           {anime.title.romaji}

@@ -127,7 +127,7 @@ function AnimeDetailPage() {
 
   return (
     <div className="min-h-screen bg-[#130921] text-[#f0e6ff] font-mono pb-20 selection:bg-[#ff00ff] selection:text-black">
-      <div className="relative w-full h-[40vh] min-h-[300px] bg-[#1a0b2e] border-b-8 border-black overflow-hidden">
+      <div className="relative w-full h-[40vh] min-h-75 bg-[#1a0b2e] border-b-8 border-black overflow-hidden">
         {anime.bannerImage && (
           <img
             src={anime.bannerImage}
@@ -145,7 +145,7 @@ function AnimeDetailPage() {
 
       <main className="max-w-6xl mx-auto px-6 relative -mt-32 z-20">
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="w-full md:w-1/3 flex-shrink-0">
+          <div className="w-full md:w-1/3 shrink-0">
             <div className="border-4 border-black shadow-[8px_8px_0px_#000] bg-[#23153c]">
               <img
                 src={anime.coverImage.extraLarge}
