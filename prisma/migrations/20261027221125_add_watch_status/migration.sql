@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Anime" ADD COLUMN     "watchStatus" TEXT NOT NULL DEFAULT 'PLANOWANE';

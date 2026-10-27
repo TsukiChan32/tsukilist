@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Anime {
+  id           Int     @id @default(autoincrement())
+  anilistId    Int     @unique
+  titleRomaji  String
+  titleEnglish String?
+  description  String?
+  coverImage   String?
+  episodes     Int?
+  status       String?
+  watchStatus  String  @default("PLANOWANE")
+
+  // NOWE POLA:
+  userRating Int? // Ocena od 1 do 10. Znak zapytania oznacza, że może być pusta (null).
+  isFavorite Boolean @default(false) // Domyślnie fałsz.
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
